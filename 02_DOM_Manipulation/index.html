@@ -6,8 +6,8 @@
   </head>
   <body>
     <h1>Institute of Software Engineering</h1>
-    <h2>GDSE</h2>
-    <h3>Panadura</h3>
+    <h2 id="h2Tag">GDSE</h2>
+    <h3 class="h3Class">Panadura</h3>
     <p>
       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae,
       architecto cum voluptate perferendis nam suscipit. Asperiores, vero
@@ -15,8 +15,47 @@
       debitis unde nulla ut.
     </p>
     <input type="text" placeholder="Input Something">
-    <button>Test</button>
+    <button id="btn1">Remove IJSE</button>
+    <button id="btn2">Set Title</button>
 
     <img src="" alt="" width="300px">
+
+    <ul>
+      <li>CMJD</li>
+      <li>GDSE</li>
+    </ul>
+
+    <script>
+      // using Tag name to select the element
+        document.getElementsByTagName("h1")[0].innerText="Hello Java Script";
+        document.getElementsByTagName("h1")[0].style.fontSize="30px";
+
+        // using ID to select the element
+        document.getElementById("h2Tag").innerText="IJSE";
+
+        // using class name to select the element
+        document.getElementsByClassName("h3Class")[0].style.color = "red";
+
+        document.getElementsByTagName("p")[0].style.backgroundColor = "red";
+        document.getElementsByTagName("p")[0].style.color = "white";
+
+        // using query Selector to select the element
+        document.querySelector("input").value="C001";
+
+        // using query Selector all to select the element
+        document.querySelectorAll("img")[0].src="./assets/img/slide1.jpeg";
+    
+        //---------------------Actions-----------------------//
+        //remove element
+        document.getElementById("btn1").addEventListener("click",function(){
+          document.getElementById("h2Tag").remove(); //remove element
+        });
+
+        //set value
+        document.getElementById("btn2").addEventListener("click",function(){
+          document.getElementsByTagName("h1")[0].innerText=document.querySelector("input").value;
+        });
+    
+    </script>
   </body>
 </html>
