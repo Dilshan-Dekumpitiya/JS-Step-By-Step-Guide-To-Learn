@@ -14,48 +14,70 @@
       obcaecati earum fugit, necessitatibus esse odit delectus commodi quas,
       debitis unde nulla ut.
     </p>
-    <input type="text" placeholder="Input Something">
+    <input type="text" placeholder="Input Something" id="imagename" />
     <button id="btn1">Remove IJSE</button>
     <button id="btn2">Set Title</button>
+    <button id="btn3">Set Image</button>
+    <button id="btn4">Set List</button>
 
-    <img src="" alt="" width="300px">
+    <img src="" alt="" width="300px" id="image" />
 
-    <ul>
+    <ul id="myList">
       <li>CMJD</li>
       <li>GDSE</li>
     </ul>
 
     <script>
       // using Tag name to select the element
-        document.getElementsByTagName("h1")[0].innerText="Hello Java Script";
-        document.getElementsByTagName("h1")[0].style.fontSize="30px";
+      document.getElementsByTagName("h1")[0].innerText = "Hello Java Script";
+      document.getElementsByTagName("h1")[0].style.fontSize = "30px";
 
-        // using ID to select the element
-        document.getElementById("h2Tag").innerText="IJSE";
+      // using ID to select the element
+      document.getElementById("h2Tag").innerText = "IJSE";
 
-        // using class name to select the element
-        document.getElementsByClassName("h3Class")[0].style.color = "red";
+      // using class name to select the element
+      document.getElementsByClassName("h3Class")[0].style.color = "red";
 
-        document.getElementsByTagName("p")[0].style.backgroundColor = "red";
-        document.getElementsByTagName("p")[0].style.color = "white";
+      document.getElementsByTagName("p")[0].style.backgroundColor = "red";
+      document.getElementsByTagName("p")[0].style.color = "white";
 
-        // using query Selector to select the element
-        document.querySelector("input").value="C001";
+      // using query Selector to select the element
+      document.querySelector("input").value = "C001";
 
-        // using query Selector all to select the element
-        document.querySelectorAll("img")[0].src="./assets/img/slide1.jpeg";
-    
-        //---------------------Actions-----------------------//
-        //remove element
-        document.getElementById("btn1").addEventListener("click",function(){
-          document.getElementById("h2Tag").remove(); //remove element
-        });
+      // using query Selector all to select the element
+      document.querySelectorAll("img")[0].src = "./assets/img/slide1.jpeg";
 
-        //set value
-        document.getElementById("btn2").addEventListener("click",function(){
-          document.getElementsByTagName("h1")[0].innerText=document.querySelector("input").value;
-        });
-    
+      //---------------------Actions-----------------------//
+      //remove element
+      document.getElementById("btn1").addEventListener("click", function () {
+        document.getElementById("h2Tag").remove(); //remove element
+      });
+
+      //set value
+      document.getElementById("btn2").addEventListener("click", function () {
+        document.getElementsByTagName("h1")[0].innerText =
+          document.querySelector("input").value;
+        document.querySelector("input").value = "";
+      });
+
+      //set image using URL
+      document.getElementById("btn3").addEventListener("click", function () {
+        document
+          .getElementById("image")
+          .setAttribute("src", document.querySelector("input").value);
+      });
+
+      //input text add to list (Get html content and update)
+      document.getElementById("btn4").addEventListener("click", function () {
+        let textInput = document.getElementById("imagename");
+        if (textInput.value !== "") {
+          document.querySelector('ul').innerHTML+="<li>"+document.querySelector("input").value+"</li>";
+          document.querySelector("input").value="";
+        } else {
+          alert("Enter something in input field");
+        }
+      });
+      
     </script>
   </body>
 </html>
