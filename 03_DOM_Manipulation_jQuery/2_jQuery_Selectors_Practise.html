@@ -1,0 +1,86 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3-Dom Manipulation using jQuery</title>
+</head>
+<body>
+    <h1>Hello jQuery</h1>
+    <h2 id="titleTwo">DOM Manipulation</h2>
+    <p class="paragrph-one">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae,
+      architecto cum voluptate perferendis nam suscipit. Asperiores, vero
+      obcaecati earum fugit, necessitatibus esse odit delectus commodi quas,
+      debitis unde nulla ut.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae,
+      architecto cum voluptate perferendis nam suscipit. Asperiores, vero
+      obcaecati earum fugit, necessitatibus esse odit delectus commodi quas,
+      debitis unde nulla ut.
+    </p>
+
+    <hr>
+    
+    <ul>
+      <li>CMJD</li>
+      <li>GDSE</li>
+      <li>DEP</li>
+    </ul>
+
+    <hr>
+
+    <input type="text">
+
+    <button id="btn">Test</button>
+    <button id="list-btn-up">List add Up</button>
+    <button id="list-btn-down">List add Down</button>
+    <button id="img-btn">Set Image</button>
+
+    <hr>
+
+    <img src="" alt="">
+
+    <hr>
+
+<script src="assets/jquery-3.7.1.min.js"></script>
+<script>
+
+  //click event
+  // $("#btn").click(function(){
+  //     $("h1").text($("input").val());
+  //     $("input").val("");
+  // });
+
+  $("#list-btn-up").click(function(){
+    var textInput = $("input").val();
+        console.log(textInput);
+        if (textInput !== "") {
+          $("ul").prepend("<li>" + textInput + "</li>");
+          $("input").val("");
+        } else {
+          alert("Enter something in input field");
+        }
+  });
+
+  $("#list-btn-down").click(function(){
+        var textInput = $("input").val();
+        console.log(textInput);
+        if (textInput !== "") {
+          $("ul").append("<li>" + textInput + "</li>");
+          $("input").val("");
+        } else {
+          alert("Enter something in input field");
+        }
+  });
+
+  $("#img-btn").click(function(){
+      $("img").attr('src',$("input").val());
+  });
+
+
+
+
+</script>
+</body>
+</html>
