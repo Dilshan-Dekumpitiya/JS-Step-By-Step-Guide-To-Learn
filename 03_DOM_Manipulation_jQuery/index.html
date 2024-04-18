@@ -1,0 +1,86 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3-Dom Manipulation using jQuery</title>
+</head>
+<body>
+    <h1>Hello jQuery</h1>
+    <h2 id="titleTwo">DOM Manipulation</h2>
+    <p class="paragrph-one">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae,
+      architecto cum voluptate perferendis nam suscipit. Asperiores, vero
+      obcaecati earum fugit, necessitatibus esse odit delectus commodi quas,
+      debitis unde nulla ut.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae,
+      architecto cum voluptate perferendis nam suscipit. Asperiores, vero
+      obcaecati earum fugit, necessitatibus esse odit delectus commodi quas,
+      debitis unde nulla ut.
+    </p>
+
+    <hr>
+    
+    <ul>
+      <li>CMJD</li>
+      <li>GDSE</li>
+      <li>DEP</li>
+    </ul>
+
+    <hr>
+
+    <input type="text">
+    <button>Test</button>
+
+    <hr>
+
+<script src="assets/jquery-3.7.1.min.js"></script>
+<script>
+
+//////////////////using js////////////////
+    document.getElementsByTagName("h1")[0].innerText="hiiii";
+
+//////////////////using jQuery////////////////
+
+    //1) using tag name
+    $("h1").text("hi");
+
+    //2) using ID
+    $("#titleTwo").text("Changed titile two"); 
+
+    //3) using class name
+    $(".paragrph-one").css('color','red');
+
+    //4) using universal selector
+    // $("*").text("universal selector");
+
+    //5) using attribute selector
+    $("[id]").text("Attribute Selector");
+
+    //6) using pseudo class selector
+    $("li:nth-child(1)").css('color','blue');
+
+    //7) using combinators
+      //child combinator
+      $("ul>li").css('font-style', 'italic');
+
+      //decendant combinator
+      $("body li").css('background','yellow');
+
+      //Adjacent combinator
+      $("h2+p").text("Adjacent Combinator");
+
+      //General Siblings combinator
+      $("h2~p").css("border", "thin solid green");
+
+    //8) Grouping selectors
+      $("h1,h2,p").remove();
+
+    // change the default selector Symbol
+    // var symbol =jQuery.noConflict();
+    // symbol("h1").text("Variable change");
+
+</script>
+</body>
+</html>
