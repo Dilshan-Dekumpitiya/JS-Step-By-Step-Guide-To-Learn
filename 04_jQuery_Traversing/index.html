@@ -1,0 +1,72 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Traversing with jQuery</title>
+  </head>
+  <body>
+    <section id="mainSection">
+      <section id="subSection1">
+        <div id="div1">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ex
+            culpa, repellat voluptates corporis labore vero, odit veritatis modi
+            numquam illum voluptatibus provident doloremque porro. Hic delectus
+            voluptatum tenetur placeat!F
+          </p>
+          <ul>
+            <li>Hello</li>
+            <li>CMJD</li>
+            <li>IJSE</li>
+          </ul>
+        </div>
+        <div id="div2">
+          <ul>
+            <li>Hello</li>
+            <li>CMJD</li>
+            <li>IJSE</li>
+          </ul>
+        </div>
+      </section>
+      <section id="subSection2">
+        <h1>Hello jQuery</h1>
+        <h2>Hello jQuery</h2>
+        <section id="para">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam,
+            culpa, doloribus corporis molestias ad temporibus sed ut aliquid
+            laborum esse non excepturi eos odio repellat? Dolorum voluptate
+            expedita sequi rerum?
+          </p>
+        </section>
+      </section>
+    </section>
+
+<script src="assets/jquery-3.7.1.min.js"></script>
+
+<script>
+    //$("body").children();
+    //ce.fn.init {0: section#mainSection, 1: script, 2: script, 3: script, length: 4, prevObject: ce.fn.init}
+
+
+    // $("html").children();
+    // ce.fn.init {0: head, 1: body, 2: grammarly-desktop-integration, length: 3, prevObject: ce.fn.init}
+
+    // $("#subSection1").children();
+    // ce.fn.init {0: div#div1, 1: div#div2, length: 2, prevObject: ce.fn.init}
+    // $("#subSection1").children("#div1");
+    // ce.fn.init {0: div#div1, length: 1, prevObject: ce.fn.init}
+    // $("#subSection1").children("#div1").children();
+    // ce.fn.init {0: p, 1: ul, length: 2, prevObject: ce.fn.init}
+    // $("#subSection1").children("#div1").children("ul");
+    // ce.fn.init {0: ul, length: 1, prevObject: ce.fn.init}
+    // $("#subSection1").children("#div1").children("ul").children();
+    // ce.fn.init {0: li, 1: li, 2: li, length: 3, prevObject: ce.fn.init}
+    // $("#subSection1").children("#div1").children("ul").children(":nth-child(1)");
+    // ce.fn.init {0: li, length: 1, prevObject: ce.fn.init}
+    // $("#subSection1").children("#div1").children("ul").children(":nth-child(1)").css('color','red');
+    // ce.fn.init {0: li, length: 1, prevObject: ce.fn.init}
+
+</script>
+  </body>
+</html>
