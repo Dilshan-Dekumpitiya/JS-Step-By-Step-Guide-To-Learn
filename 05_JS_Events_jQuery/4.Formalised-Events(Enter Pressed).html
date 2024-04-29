@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formalised Events</title>
+    
+</head>
+<body>
+
+  <h1 id="h1">Hello JS..</h1>
+  <input type="text" id="txtCusID" placeholder="ID"/>
+  <br><br>
+  <input type="text" id="txtCusName" placeholder="Name"/>
+  <br><br>
+  <input type="text" id="txtCusAddress" placeholder="Address"/>
+  <br><br>
+  <input type="text" id="txtCusSalary" placeholder="Salary"/>
+  <br><br>
+  <button id="btnCustomer">Save Customer</button>
+
+
+<script src="assets/jquery-3.7.1.min.js"></script>
+
+<script>
+
+$('#txtCusID').focus();
+
+$('#txtCusID').keydown(function(event){
+  console.log("Key down");
+  console.log(event);
+  console.log(event.key); //KeyA
+  console.log(event.code); //A
+  if(event.key=="Enter"){
+      $('#txtCusName').focus(); //After press enter focus it to Name text box
+  }
+  
+});
+
+$('#txtCusName').keydown(function(event){
+  console.log("Key down");
+  console.log(event);
+  console.log(event.key); //KeyA
+  console.log(event.code); //A
+  if(event.key=="Enter"){
+      $('#txtCusAddress').focus(); //After press enter focus it to Address text box
+  }
+  
+});
+
+$('#txtCusAddress').keydown(function(event){
+  console.log("Key down");
+  console.log(event);
+  console.log(event.key); //KeyA
+  console.log(event.code); //A
+  if(event.key=="Enter"){
+      $('#txtCusSalary').focus(); //After press enter focus it to Salary text box
+  }
+  
+});
+
+$('#txtCusSalary').keydown(function(event){
+  console.log("Key down");
+  console.log(event);
+  console.log(event.key); //KeyA
+  console.log(event.code); //A
+  if(event.key=="Enter"){
+      $('#h1').text("Done"); //After press enter set h1 tag to done
+  }
+  
+});
+
+
+
+</script>
+    
+</body>
+</html>

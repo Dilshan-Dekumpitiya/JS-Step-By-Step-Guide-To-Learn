@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Events</title>
+    <style>
+      div{
+          background: red;
+          width: 200px;
+          height: 200px;
+      }
+  </style>
+</head>
+<body>
+
+<h1>Hello IJSE...</h1>
+
+<div>
+
+</div>
+
+<script src="assets/jquery-3.7.1.min.js"></script>
+
+<script>
+
+$('div').mousedown(function(){
+  console.log("Mouse Down");
+});
+
+$('div').mouseup(function(){
+  console.log("Mouse Up");
+});
+
+$('div').mousemove(function(){
+  console.log("Mouse Move");
+});
+
+$('div').mousemove(function(event){
+  console.log(event);
+});
+
+</script>
+    
+</body>
+</html>

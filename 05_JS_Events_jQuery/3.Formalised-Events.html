@@ -3,13 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formalised Events</title>
-    <style>
-      div{
-          background: red;
-          width: 300px;
-          height: 400px;
-      }
-  </style>
+  
 </head>
 <body>
 
@@ -21,14 +15,52 @@
   <input type="text" id="txtCusAddress" placeholder="Address"/>
   <br><br>
   <input type="text" id="txtCusSalary" placeholder="Salary"/>
-    
+  <br><br>
+  <button id="btnCustomer">Save Customer</button>
 
 
 <script src="assets/jquery-3.7.1.min.js"></script>
 
 <script>
 
+$('#btnCustomer').click(function(){ 
+  alert("Clicked");
+});
 
+
+$('#btnCustomer').dblclick(function(){ 
+  alert("Double Clicked");
+});
+
+$('#txtCusName').focus();
+
+$('#txtCusName').blur(function(){
+  //console.log("Customer name Blured");
+});
+
+$('#txtCusName').keydown(function(){
+  console.log("Key down");
+});
+
+$('#txtCusAddress').keyup(function(){
+  console.log("Key up");
+});
+
+$('#txtCusSalary').keypress(function(){
+  console.log("Key pressed");
+});
+
+$('#txtCusSalary').mousedown(function(){
+  console.log("Mouse Down");
+});
+
+$('#txtCusSalary').mouseup(function(){
+  console.log("Mouse Up");
+});
+
+$('#txtCusSalary').mousemove(function(){
+  console.log("Mouse Move");
+});
 
 </script>
     
