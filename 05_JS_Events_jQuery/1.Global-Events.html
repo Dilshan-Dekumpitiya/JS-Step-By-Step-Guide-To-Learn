@@ -13,19 +13,19 @@
   </head>
   <body>
 
-    <div>
+    <div onmousedown="console.log('mouse down')">
 
     </div>
 
     <br>
 
     <input type="text" id="txtCusID" />
-    <button>Test</button>
+    <button onclick="alert('clicked!')">Test</button>
     <br />
     <br>
-    
+
     <input type="text" id="txtCusName" />
-    <button>Test</button>
+    <button onmousemove="print()">Test</button>
     <br />
 
     <p>
@@ -37,6 +37,13 @@
 
     <script src="assets/jquery-3.7.1.min.js"></script>
 
-    <script></script>
+    <script>
+
+        function print(){
+            console.log('moved')
+        }
+
+
+    </script>
   </body>
 </html>
