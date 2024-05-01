@@ -30,9 +30,11 @@
     if(position==text.length){
       position=0;
     }
+
+    $('h1').text(output);
   }
 
-  setInterval(animateText,100);
+
 
 $(window).mousemove(function(event){
   //console.log(event.pageX,event.pageY);
@@ -41,11 +43,11 @@ $(window).mousemove(function(event){
   $('h1').css("left",event.pageX);
   $('h1').css("top",event.pageY);
 
-  animateText();
+
 
 });
 
-
+setInterval(animateText,500);
 
 </script>
     
