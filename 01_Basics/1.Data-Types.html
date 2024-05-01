@@ -81,7 +81,40 @@
 // 	Structural types
 
 // objects
+
+let id="C0001";
+let name="Dilshan";
+let address="Matugama";
+let salary=100000;
+
+//js literal base object
+var customer={
+    id:"C0001",
+    name:"Dilshan",
+    address:"Matugama",
+    salary:100000
+}
+
+//dot notation
+console.log(customer.id);
+console.log(customer.name);
+console.log(customer.address);
+console.log(customer.salary);
+
+//bracket notation
+console.log(customer['id']);
+
+console.log(typeof customer); //object
+
 // functions
+//define a function
+function saveCustomer(){
+    console.log("Save Customer");
+}
+
+//call a function
+saveCustomer();
+
 
 // Structural Root Primitive
 

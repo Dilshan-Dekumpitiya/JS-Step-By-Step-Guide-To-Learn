@@ -4,10 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mouse Events</title>
     <style>
-      div{
-          background: red;
-          width: 200px;
-          height: 200px;
+      body{
+        overflow-x: hidden;
       }
   </style>
 </head>
@@ -15,29 +13,39 @@
 
 <h1>Hello IJSE...</h1>
 
-<div>
-
-</div>
 
 <script src="assets/jquery-3.7.1.min.js"></script>
 
 <script>
 
-$('div').mousedown(function(){
-  console.log("Mouse Down");
+  let text = $('h1').text();
+
+  var position=0;
+
+  function animateText(){
+    let output = text.substr(0,position);
+    console.log(output);
+    position++;
+
+    if(position==text.length){
+      position=0;
+    }
+  }
+
+  setInterval(animateText,100);
+
+$(window).mousemove(function(event){
+  //console.log(event.pageX,event.pageY);
+
+  $('h1').css("position","relative");
+  $('h1').css("left",event.pageX);
+  $('h1').css("top",event.pageY);
+
+  animateText();
+
 });
 
-$('div').mouseup(function(){
-  console.log("Mouse Up");
-});
 
-$('div').mousemove(function(){
-  console.log("Mouse Move");
-});
-
-$('div').mousemove(function(event){
-  console.log(event);
-});
 
 </script>
     

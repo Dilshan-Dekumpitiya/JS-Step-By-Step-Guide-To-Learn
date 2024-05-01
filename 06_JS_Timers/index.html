@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Timers</title>
+</head>
+<body>
+
+<h1>JS Timers</h1>
+<h2>1</h2>
+<button id="btnStart">Start</button>
+<button id="btnStop">Stop</button>
+
+
+<script src="./assets/jquery-3.7.1.min.js"></script>
+
+<script>
+
+// setTimeout()
+// setInterval()
+
+// function callMe(){
+//     console.log("Call me");
+// }
+
+//setInterval(callMe,100);
+//callMe();
+
+// setTimeout(callMe, 500);
+
+//console.log(parseInt($('h2').text()));
+
+
+
+//console.log(typeof number);
+
+let timerID; //create timer ID
+
+$('#btnStart').click(function () {
+   clearInterval(timerID); //need to stop/clear current timer
+   timerID= setInterval(count,1000); //cretae new timer and get timer ID value
+   console.log(timerID);
+});
+
+let number = 1;
+
+function count(){
+
+    number++;
+    $('h2').text(number);
+
+}
+
+$('#btnStop').click(function () {
+    
+    clearInterval(timerID); //stop timer using ID
+    
+ });
+
+</script>
+
+</body>
+</html>
