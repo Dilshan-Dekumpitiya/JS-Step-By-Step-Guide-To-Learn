@@ -1,0 +1,124 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+   
+<script src="assets/jquery-3.7.1.min.js"></script>
+
+<script>
+    
+    //literal base objects
+    // var customer={
+    //     id:"C001",
+    //     name:"Dilshan",
+    //     address:"Matugama",
+    //     salary:1000000
+    // }
+
+    //function base objects
+    // function Customer(){
+    //     this.id="C002";
+    //     this.name="Madu";
+    //     this.address="Kalutara";
+    //     this.salary=250000;
+    // }
+
+    //Customer(); --> Function
+
+    //this is the object (customer2)
+ //   var customer2=new Customer();
+
+    // How to add methods inside objects
+    // var customer={
+    //     id:"C001",
+    //     name:"Dilshan",
+    //     address:"Matugama",
+    //     salary:1000000,
+    //     age:{ age:30, year:1998}, //object
+    //     printMyName:function(){
+    //         console.log("Name: ",this.name);
+    //     }
+    // }
+
+    //call the function
+    // customer.printMyName();
+
+    // function Customer(){
+    //     this.id="C002";
+    //     this.name="Madu";
+    //     this.address="Kalutara";
+    //     this.salary=250000;
+    //     this.printMyDetails=function(){
+    //         console.log("Name: ",this.name);
+    //     }
+    // }
+
+    // var customer2=new Customer();
+    // customer2.printMyDetails();
+
+    //Constructor behavior from functions
+    // function CustomerDTO(id,name,address,salary){
+    //     this.id=id;
+    //     this.name=name;
+    //     this.address=address;
+    //     this.salary=salary;
+    // }
+
+    // var customer1=new CustomerDTO("C001","Dilshan","Matugama",255555555);
+    // var customer2=new CustomerDTO("C002","Dekum","Kalutara",455555555);
+
+    // //Encapsulation
+    // var customer = {
+    //     id:"C001"
+    // }
+
+    // //can add new property
+    // customer.name="Dilshan";
+
+    // //can delete property
+    // delete customer.name;
+
+    // //can change value 
+    // customer.id="C002";
+
+    // //can count keys
+    // Object.keys(customer);
+
+    // function Item(id){
+    //     this.id=id;
+    // }
+
+    // var item= new Item("I001");
+
+    //Property Descriptors
+    // value 
+    // enumerable
+    // configurable
+    // writable 
+
+    // var customer={
+    //     id:"C001"
+    // }
+
+    //console.log(Object.getOwnPropertyDescriptors(customer,'id'));
+    //{value: 'C001', writable: true, enumerable: true, configurable: true}
+
+    //Prevent
+    // Object.defineProperty(customer,'id',{
+    // writable:false,
+    // enumerable:false,
+    // configurable:false,
+    // });
+
+    //Object.getOwnPropertyDescriptor(customer,'id');
+    //{value: 'C001', writable: false, enumerable: false, configurable: false}
+
+
+
+
+</script>
+</body>
+</html>
